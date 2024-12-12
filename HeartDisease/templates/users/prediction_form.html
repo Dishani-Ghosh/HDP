@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction form</title>
+    <style>
+        body {
+            background-image: url('https://img.freepik.com/premium-photo/heart-is-being-examined-by-doctor-stethoscope_131346-6101.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .main{
+            position: fixed;
+            top: 50px;
+            left: 410px;
+            width: 550px;
+            background-color:#ffffff;
+            border-radius: 10px;
+            align-items: center;
+            padding: 5%;
+        }
+        h1{
+            color: #0086b3;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        input[type=submit]{
+            background-color: #4dc3ff;
+            border: 2px;
+            color: white;
+            padding: 8px 16px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+<p> Welcome to the predict page!</p>
+<div align = 'center' class="main">
+<h1>Please enter the following information: </h1>
+<form action="result">
+    <table>
+        <tr>
+            <td align="right">Patient id:</td>
+            <td align="left"> <input type="text" name="n1"></td>
+        </tr>
+
+        <tr>
+            <td align="right">Patient id:</td>
+            <td align="left"> <input type="text" name="n1"></td>
+        </tr>
+
+        <tr>
+            <td align="right">Weight kg:</td>
+            <td align="left"> <input type="text" name="n2"></td>
+        </tr>
+
+        <tr>
+            <td align="right">Temperature:</td>
+            <td align="left"> <input type="text" name="n3"></td>
+        </tr>
+
+        <tr>
+            <td align="right">Heart rate:</td>
+            <td align="left"> <input type="text" name="n4"></td>
+        </tr>
+
+        <tr>
+            <td align="right">Symptoms:</td>
+            <td align="left"> <input type="text" name="n5"></td>
+        </tr>
+
+        <tr>
+            <td align="right">Existing Condition:</td>
+            <td align="left"> <input type="text" name="n6"></td>
+        </tr>
+
+        <tr>
+            <td align="right">Lab test result:</td>
+            <td align="left"> <input type="text" name="n7"></td>
+        </tr>
+
+        <tr>
+            <td align="right">Cholostrol mg:</td>
+            <td align="left"> <input type="text" name="n8"></td>
+        </tr>
+
+        <tr>
+            <td align="right">Blood sugar mg:</td>
+            <td align="left"> <input type="text" name="n9"></td>
+        </tr>
+
+        <tr>
+            <td align="right">Family History:</td>
+            <td align="left"> <input type="text" name="n10"></td>
+        </tr>
+
+        <tr>
+            <td align="right">Smoking:</td>
+            <td align="left"> <input type="text" name="n11"></td>
+        </tr>
+
+        <tr>
+            <td align="right">Systolic BP:</td>
+            <td align="left"> <input type="text" name="n12"></td>
+        </tr>
+
+        <tr>
+            <td align="right">Diastolic BP:</td>
+            <td align="left"> <input type="text" name="n13"></td>
+        </tr>
+
+        <tr>
+            <td align="right">BMI:</td>
+            <td align="left"> <input type="text" name="n14"></td>
+        </tr>
+
+        <!-- Correct placement of the submit button within the form -->
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="Submit">
+            </td>
+        </tr>
+    </table>
+</form>
+
+<!-- Ensure the result is outside the form -->
+{% if result2 %}
+        <div align="center">
+            <h2>Prediction Result:</h2>
+            <p>{{ result2 }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
